@@ -1,6 +1,6 @@
-# AIStreamer
+# XAIBO
 
-AIStreamer is a powerful and flexible streaming platform that leverages artificial intelligence to provide enhanced streaming experiences.
+XAIBO is a powerful and flexible streaming platform that leverages artificial intelligence to provide enhanced streaming experiences.
 
 ## Features
 
@@ -11,7 +11,7 @@ AIStreamer is a powerful and flexible streaming platform that leverages artifici
 
 ## Installation
 
-To install AIStreamer, follow these steps:
+To install XAIBO, follow these steps:
 
 1. Clone the repository:
     ```bash
