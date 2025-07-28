@@ -15,9 +15,9 @@ Installation
 To install XAIBO, follow these steps:
 
 bash
-Kopiëren
-Bewerken
-git clone https://github.com/xaiboai/xaibo.git
+edit
+copy
+git clone [https://github.com/xaiboai/xaibo.git](https://github.com/XAIBOAI/XAIBOAI)
 cd xaibo
 pip install -r requirements.txt
 Usage
@@ -27,8 +27,8 @@ To start reviewing a CS2 stream, follow these steps:
 Provide the URL or stream key (RTMP) of the CS2 game stream:
 
 bash
-Kopiëren
-Bewerken
+edit
+copy
 python connect_stream.py --source <stream_url_or_key>
 Example:
 
@@ -38,8 +38,8 @@ Bewerken
 python connect_stream.py --source "rtmp://twitch.tv/live/xaibo_ai_gaming_companion"
 2. Start the real-time event detection and commentary engine
 bash
-Kopiëren
-Bewerken
+edit
+copy
 python xaibo_review.py --agent XAIBO --voice "cyber-funny" --stream_mode live
 This will:
 
@@ -51,8 +51,8 @@ Trigger voice commentary in real time or with minimal delay
 
 3. Optional: Save a reviewed version with overlays
 bash
-Kopiëren
-Bewerken
+edit
+copy
 python save_reviewed_stream.py --source <stream_url> --output reviewed_game.mp4
 Developer Notes
 xaibo_review.py contains the main AI review engine (detection + commentary logic).
