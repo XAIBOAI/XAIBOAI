@@ -17,7 +17,7 @@ To install XAIBO, follow these steps:
 bash
 Kopiëren
 Bewerken
-git clone https://github.com/yourusername/xaibo.git
+git clone https://github.com/xaiboai/xaibo.git
 cd xaibo
 pip install -r requirements.txt
 Usage
