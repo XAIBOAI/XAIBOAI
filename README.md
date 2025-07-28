@@ -1,55 +1,71 @@
-# XAIBO
+XAIBO is an AI-powered game analysis and commentary platform designed to review and comment on live CS2 matches in real-time or from stream recordings. With intelligent behavior tracking, event detection, and dynamic voice commentary, XAIBO provides entertaining and insightful breakdowns of every play.
 
-XAIBO is a powerful and flexible streaming platform that leverages artificial intelligence to provide enhanced streaming experiences.
+Features
+AI-Powered Commentary: Live review of CS2 gameplay with witty, smart, and sometimes savage remarks.
 
-## Features
+Event Detection: Detects kills, flashes, molotovs, triple kills, wins, and other CS2 highlights.
 
-- **AI-Powered Recommendations**: Get personalized content recommendations based on your viewing habits.
-- **Real-Time Analytics**: Monitor and analyze streaming performance in real-time.
-- **Multi-Platform Support**: Stream across various devices and platforms seamlessly.
-- **High-Quality Streaming**: Enjoy high-definition streaming with minimal buffering.
+Stream Input Support: Connect directly to live or recorded Twitch/YouTube/OBS streams.
 
-## Installation
+Customizable Voice Output: Choose from multiple voice styles and personalities.
 
+Multiplatform Streaming: Supports output to Twitch, YouTube, or local save.
+
+Installation
 To install XAIBO, follow these steps:
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/AIStreamer.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd AIStreamer
-    ```
-3. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+bash
+Kopiëren
+Bewerken
+git clone https://github.com/yourusername/xaibo.git
+cd xaibo
+pip install -r requirements.txt
+Usage
+To start reviewing a CS2 stream, follow these steps:
 
-## Usage
+1. Set the stream source
+Provide the URL or stream key (RTMP) of the CS2 game stream:
 
-To start the streaming service, run the following command:
-```bash 
-To start the streaming service, run the following commands in sequence:
+bash
+Kopiëren
+Bewerken
+python connect_stream.py --source <stream_url_or_key>
+Example:
 
-1. Execute `select_roi.py` to select the region of interest:
-    ```bash
-    python select_roi.py <input_video>
-    ```
+bash
+Kopiëren
+Bewerken
+python connect_stream.py --source "rtmp://twitch.tv/live/your_channel"
+2. Start the real-time event detection and commentary engine
+bash
+Kopiëren
+Bewerken
+python xaibo_review.py --agent XAIBO --voice "cyber-funny" --stream_mode live
+This will:
 
-2. Run `det.py` to perform detection:
-    ```bash
-    python det.py <input_video>
-    ```
+Connect to the stream
 
-3. Execute `timestamp_filter.py` to filter timestamps:
-    ```bash
-    python timestamp_filter.py
-    ```
+Detect key gameplay events (kills, flashes, wins, etc.)
 
-4. Finally, run `vid_gen.py` to generate the video:
-    ```bash
-    python vid_gen.py <input_video> <output_video> <SPEECH.wav>
-    ```
-```
+Trigger voice commentary in real time or with minimal delay
 
+3. Optional: Save a reviewed version with overlays
+bash
+Kopiëren
+Bewerken
+python save_reviewed_stream.py --source <stream_url> --output reviewed_game.mp4
+Developer Notes
+xaibo_review.py contains the main AI review engine (detection + commentary logic).
+
+connect_stream.py handles the RTMP/stream capture and frame extraction.
+
+voice_engine.py converts AI text commentary into speech using ElevenLabs or custom models.
+
+event_detector/ includes all detection logic (kills, molotovs, flashed, etc.).
+
+Coming Soon
+Support for stream chat integration to react to funny or hyped moments.
+
+Overlay engine for real-time meme inserts or stat breakdowns.
+
+Replay highlight mode with cinematic slow-motion edits.
