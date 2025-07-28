@@ -35,7 +35,7 @@ Example:
 bash
 Kopiëren
 Bewerken
-python connect_stream.py --source "rtmp://twitch.tv/live/your_channel"
+python connect_stream.py --source "rtmp://twitch.tv/live/xaibo_ai_gaming_companion"
 2. Start the real-time event detection and commentary engine
 bash
 Kopiëren
